@@ -1,14 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    07                                                 :+:      :+:    :+:    #
+#    01                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/06/06 19:18:14 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 19:20:00 by wvenita          ###   ########.fr        #
+#    Created: 2019/06/06 21:16:50 by wvenita           #+#    #+#              #
+#    Updated: 2019/06/06 21:27:36 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#!/bin/sh
-cat /var/run/sshd.pid
+#!/bin/bash
+# Write a script which displays only the login, UID and Path
+
+IFS=':'
+
+while read username password uid gid comment home_directory shell
+do
+    echo "$username:$uid:$home_directory"
+done < /etc/passwd
