@@ -6,8 +6,10 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 21:04:50 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/04 21:15:42 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/03 14:08:33 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Amazon
+//Amazon
+host slash16.org
+whois {ip}

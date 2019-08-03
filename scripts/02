@@ -6,34 +6,11 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 21:18:34 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 21:27:34 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/03 14:49:56 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-##Check if the user exists using getent command
-user_exists=$(getent passwd $1)
-
-##If the user doesn't exist, we need not perform the backup. 
-
-if [ -z "$user_exists" ] 
-then
-        echo "User $1 does not exist"
-else
-        cd /root
-        #Incorporating derobert's suggestion here. 
-        mkdir -p "DeletedUsers"
-        ##Use tar or rsync to do the backup as cp will be inefficient.
-        tar czvf "$1".tar.gz /home/"$1"
-        firewall=$(grep -c "192.168.5.5" /etc/sysconfig/iptables)
-        doers=$(egrep -c "$1" /etc/sudoers)
-        userdel -rf "$1"
-        if [ $firewall -ne 0 ]
-        then 
-            mail -s "$firewallrulesexist" emailaddress < /dev/null
-        fi
-        if [ $doers -ne 0 ]
-        then 
-            sed ^"$1" /#/i
-        fi
-fi
+USER=$1
+pgrep -u $USER | while read PID; do sudo kill $PID; done
+sudo userdel $USER
