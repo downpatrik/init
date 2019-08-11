@@ -6,9 +6,9 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 19:17:54 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 19:18:43 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/11 19:35:29 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-service ssh status
+systemctl status ssh

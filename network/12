@@ -6,9 +6,9 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 21:24:11 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/04 21:32:45 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/11 19:31:22 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-ipconfig getpacket en0 | grep siaddr | awk '{print $3}'
+ifconfig en0 | grep "inet " | awk '{print $2}'

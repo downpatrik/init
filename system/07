@@ -6,9 +6,9 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 19:18:14 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 19:20:00 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/11 19:47:28 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-cat /var/run/sshd.pid
+systemctl status ssh | grep PID | awk '{print $3}'
