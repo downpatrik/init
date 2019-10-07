@@ -6,10 +6,9 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 21:10:46 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 21:15:14 by wvenita          ###   ########.fr        #
+#    Updated: 2019/10/07 20:01:18 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-adduser newuser
-AllowUsers
-give him authorized_keys from server
+graphical: type login and pass
+ssh: ssh <user>@<ip> then type pass
