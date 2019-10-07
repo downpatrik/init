@@ -6,11 +6,11 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 21:18:34 by wvenita           #+#    #+#              #
-#    Updated: 2019/08/03 14:49:56 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/11 20:32:55 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#!/bin/sh
+#!/bin/bash
 USER=$1
 pgrep -u $USER | while read PID; do sudo kill $PID; done
 sudo userdel $USER

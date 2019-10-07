@@ -6,9 +6,9 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 20:20:10 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 20:34:17 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/11 20:36:27 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-service ssh start
+ssh wvenita42@127.0.0.1 (localhost)

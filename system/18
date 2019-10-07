@@ -6,9 +6,9 @@
 #    By: wvenita <wvenita@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 20:32:18 by wvenita           #+#    #+#              #
-#    Updated: 2019/06/06 20:32:31 by wvenita          ###   ########.fr        #
+#    Updated: 2019/08/11 20:36:49 by wvenita          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-service ssh stop
+systemctl stop ssh
